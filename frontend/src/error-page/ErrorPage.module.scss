@@ -1,0 +1,28 @@
+.error-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  height: 100%;
+  padding: 2rem 1rem;
+}
+
+.error-page .error-card {
+  flex-grow: 1;
+  margin: 0;
+  padding: 1rem;
+  overflow: auto;
+
+  background-color: var(--palette-grey-900);
+
+  color: var(--palette-common-white);
+
+  > span {
+    display: block;
+  }
+}
+
+.error-title {
+  color: var(--palette-error-light);
+  font-weight: 700;
+}

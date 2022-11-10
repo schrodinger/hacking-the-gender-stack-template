@@ -1,0 +1,16 @@
+{
+  "home": {
+    "description": "Schrödinger's first hackathon!",
+    "eventName": "Hacking the Gender Stack",
+    "pageTitle": "Home",
+    "welcomeTo": "Welcome to"
+  },
+  "logoAlt": "Scientist logo",
+  "sidebar": {
+    "feedbackTitle": "Feedback",
+    "pieTitle": "Apple Pie",
+    "profileTitle": "Profile",
+    "settingsTitle": "Settings",
+    "treeTitle": "Honestly no idea what this is"
+  }
+}

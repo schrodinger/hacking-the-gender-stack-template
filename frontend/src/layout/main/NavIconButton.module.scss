@@ -1,0 +1,18 @@
+:global(.MuiIconButton-root).nav-icon-button {
+  aspect-ratio: 1;
+
+  border-radius: 40%;
+}
+
+:global(.MuiIconButton-root).active {
+  background-color: rgb(var(--palette-primary-light-channels) / 20%);
+
+  &:hover {
+    background-color: rgb(var(--palette-primary-light-channels) / 40%);
+  }
+}
+
+// This ridiculous selector is to win a specificity battle against MUI styles
+:global(.MuiTooltip-popper) :global(.MuiTooltip-tooltip.MuiTooltip-tooltipPlacementRight).tooltip {
+  margin-left: 5px;
+}

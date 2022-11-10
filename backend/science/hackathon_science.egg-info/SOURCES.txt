@@ -1,0 +1,6 @@
+setup.py
+hackathon_science.egg-info/PKG-INFO
+hackathon_science.egg-info/SOURCES.txt
+hackathon_science.egg-info/dependency_links.txt
+hackathon_science.egg-info/requires.txt
+hackathon_science.egg-info/top_level.txt

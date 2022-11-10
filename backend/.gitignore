@@ -1,0 +1,8 @@
+## Backend gitignores
+__pycache__
+*.egg-info
+
+.vscode/
+.idea/
+api/db.sqlite3
+api/migrations

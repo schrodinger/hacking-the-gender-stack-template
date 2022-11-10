@@ -1,0 +1,13 @@
+## Install docker
+...
+
+
+## install python + virtualenv
+..
+
+
+## activate environment
+...
+
+
+## docker compose

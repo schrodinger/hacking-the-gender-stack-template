@@ -3,4 +3,4 @@ from django.views import View
 
 class Enumerate(View):
     def get(self, request):
-        return HttpResponse("Enumerate view")
+        return HttpResponse("Enumerate view, hello")

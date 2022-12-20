@@ -6,13 +6,10 @@ services:
     container_name: docker_backend
     expose:
       - 8000
-    ports:
-      - "8000:8000"
   nginx:
-    build:
-      context: ./nginx/
+    build: ./nginx
     container_name: docker_nginx
     depends_on:
       - backend
     ports:
-      - "8080:8000"
+      - 8080:80

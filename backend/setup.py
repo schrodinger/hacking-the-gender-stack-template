@@ -5,8 +5,7 @@ from setuptools import find_packages
 from setuptools import setup
 
 install_reqs = [
-    "Django==4.1", "djangorestframework==3.11.0", "drf-spectacular==0.23.1",
-    "setuptools==65.3.0", "gunicorn==19.6.0"
+        "pytz",
 ]
 
 setup(

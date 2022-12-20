@@ -12,6 +12,8 @@ EXPOSE 8000
 
 COPY requirements.txt setup.py run.sh ./
 COPY api ./api
+
+COPY science ./science
 RUN pip install -r requirements.txt
 
 ENTRYPOINT ["/bin/bash", "run.sh"]

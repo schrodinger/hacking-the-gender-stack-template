@@ -15,5 +15,6 @@ COPY api ./api
 
 COPY science ./science
 RUN pip install -r requirements.txt
+RUN apt-get update &&  apt-get install ffmpeg libsm6 libxext6  -y
 
 ENTRYPOINT ["/bin/bash", "run.sh"]

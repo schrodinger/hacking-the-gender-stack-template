@@ -13,6 +13,7 @@ class Enumerate(APIView):
         serializer = EnumerateSerializer(data=data)
         serializer.is_valid(raise_exception=True)
 
-        products = rgroup_enumerate(core=serializer.validated_data["core_mol"], rgroups=serializer.validated_data["rgroup_mols"])
+        products = rgroup_enumerate(core_smi=serializer.validated_data["core_smiles"],
+                                    rgroup_smis=serializer.validated_data["rgroup_smiles"])
         response = {"products": products}
         return Response(response)

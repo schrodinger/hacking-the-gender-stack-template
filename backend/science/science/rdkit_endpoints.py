@@ -78,13 +78,13 @@ def get_QED_props(product_smiles: List[str], qed_props: List[str] = ALL_QED_PROP
     column_names = ["Image", "MW", "ALOGP", "HBA", "HBD", "PSA", "ROTB", "AROM", "ALERTS", "QED"]
     for idx, product_smi in enumerate(product_smiles):
         p = Chem.MolFromSmiles(product_smi)
-        lst = []
+        property_dict = {}
         props = QED.properties(p)
         for prop in qed_props:
             a = float(props.__getattribute__(prop))
-            lst.append(a)
-        lst.append(round(QED.qed(p), 3))
-        data[f"Product {idx + 1}"] = lst
+            property_dict[prop] = a
+        property_dict["WEIGHTED_QED"]= (round(QED.qed(p), 3))
+        data[product_smi] = property_dict
     return data
 
 

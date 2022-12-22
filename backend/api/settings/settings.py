@@ -19,7 +19,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'rest_framework'
+    'rest_framework',
+    'drf_spectacular',
 ]
 
 REST_FRAMEWORK = {

@@ -1,6 +1,10 @@
 from django.contrib import admin
 from django.urls import path, include
 
+from drf_spectacular.views import SpectacularAPIView
+from drf_spectacular.views import SpectacularRedocView
+from drf_spectacular.views import SpectacularSwaggerView
+
 
 def prefix(str):
     return "api/" + str
@@ -11,4 +15,12 @@ urlpatterns = [
     path(prefix('enumerate/'), include('api.enumerate.urls')),
     path(prefix('image/'), include('api.image.urls')),
     path(prefix('properties/'), include('api.properties.urls')),
+
+    # Dynamic API documentation endpoints
+    path(prefix('schema/yaml/'), SpectacularAPIView.as_view(), name='schema'),
+    path(prefix('schema/'), SpectacularSwaggerView.as_view(url_name='schema'),
+         name='swagger-ui'),
+    path(prefix('schema/redoc/'),
+         SpectacularRedocView.as_view(url_name='schema'),
+         name='redoc'),
 ]

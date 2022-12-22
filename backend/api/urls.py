@@ -10,4 +10,5 @@ urlpatterns = [
     path(prefix('health/'), include('api.health.urls')),
     path(prefix('enumerate/'), include('api.enumerate.urls')),
     path(prefix('image/'), include('api.image.urls')),
+    path(prefix('properties/'), include('api.properties.urls')),
 ]

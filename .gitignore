@@ -1,0 +1,13 @@
+# Python, Django ignores
+__pycache__
+*.egg-info
+
+# JavaScript, Node ignores
+node_modules
+dist
+npm-debug.log*
+
+# Misc
+.idea/
+.vscode/
+.DS_Store

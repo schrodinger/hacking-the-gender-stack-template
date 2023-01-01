@@ -12,6 +12,13 @@ module.exports = {
   plugins: ['stylelint-order'],
   rules: {
     'declaration-empty-line-before': null,
+    'selector-class-pattern': [
+      /^([a-z0-9\-]+|Mui[A-Z][a-zA-Z0-9\-]+)$/,
+      {
+        message: 'Selector should be written in lowercase with hyphens (selector-class-pattern)',
+      },
+    ],
+    'selector-pseudo-class-no-unknown': [true, { ignorePseudoClasses: ['global'] }],
     'order/properties-order': [
       getPropertyOrder({ emptyLineBefore: 'always', noEmptyLineBetween: true }),
     ],

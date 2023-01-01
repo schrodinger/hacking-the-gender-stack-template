@@ -34,6 +34,24 @@ $> npm run build
 
 ## Development
 
+### Libraries and Frameworks
+
+There are a few libraries and frameworks that we use in this template to help us focus most of our attention on the core implementation of our application's business logic and enable faster prototyping.
+
+#### [React](https://beta.reactjs.org/)
+
+The most fundamental library we are using to construct our UI is React. React enables us to write declarative code with reactive state and allows us to split up our UI in convenient reusable components. Since we're using React you will see that our entire markup is coded using TypeScript with JSX (TSX) instead of HTML. You can learn more about React and JSX [here](https://beta.reactjs.org/learn/describing-the-ui)
+
+#### [Material UI](https://mui.com/) and [SCSS](https://sass-lang.com)
+
+Material UI is the component library we are using to construct our UI elements. Material UI provides a collection of opinionated styled low level components (based on Google's Material Design design system) that we can compose to quickly build out our application UI. In order to provide custom styles to our Material UI React components, we are writing custom styles in SCSS modules. SCSS is a superset of CSS that adds some extra language features to help us write more maintainable CSS. However if you're not familiar with SCSS syntax you can just use plain old CSS since all CSS is perfectly valid SCSS.
+
+Since we are writing styles across multiple different SCSS modules, we are using a feature called [CSS modules](https://github.com/css-modules/css-modules) to locally scope all our class names so we don't run into conflicting classes in different parts of the application. To enable this feature we simply ensure that our SCSS file names end in `.module.scss` and our build system takes care of the rest. To use the scoped class names from our SCSS files in our React components we use the [`classnames`](https://github.com/JedWatson/classnames#alternate-bind-version-for-css-modules) library - you can see examples of this usage in some of our `.tsx` files.
+
+#### [React Router](https://reactrouter.com/en/6.6.1/start/overview)
+
+React Router allows us to use "client side routing" in our application. This means we can associate different pages in our application with different URLs (like a traditional website) without needing to fetch a new document from the server. This lets us preserve local UI state between pages and offers more instant app-like navigation between routes in our application. You can see the existing routes in our application in `src/routes.tsx` and if you need to familiarize yourself with some of the features React Router offers, you can skim this [tutorial](https://reactrouter.com/en/6.6.1/start/tutorial).
+
 ### Build system
 
 The build system tooling for an application encapsulates everything from setting up a development environment, tools to enhance development experience all the way to packaging and optimizing an application for production. As such, most developers don't need to dive too deep into how the build system works to contribute code to their application. If you're not planning on making any changes to the pre-configured development environment, you do not necessarily need to read through this section of the documentation. But if you'd like to make changes to your development environment or if you're just curious about things happening under the hood, this documentation should help you get a high level idea of the frontend tooling.

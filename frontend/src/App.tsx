@@ -1,18 +1,20 @@
-import { useState } from 'react';
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import { RouterProvider } from 'react-router';
+import { createBrowserRouter } from 'react-router-dom';
+
+import ThemeVarsInjector from './shared/theme/ThemeVarsInjector';
+import routes from './routes';
+import theme from './shared/theme/theme';
+
+const router = createBrowserRouter(routes);
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const handleClick = () => {
-    setCount((prevCount) => prevCount + 1);
-  };
-
   return (
-    <div>
-      <div>Hackathon project frontend</div>
-      <div>Count: {count}</div>
-      <button onClick={handleClick}>Increment</button>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <ThemeVarsInjector />
+      <RouterProvider router={router} />
+    </ThemeProvider>
   );
 }
 

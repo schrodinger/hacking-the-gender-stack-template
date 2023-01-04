@@ -1,6 +1,6 @@
 Django==4.1
 gunicorn==19.6.0
-djangorestframework==3.11.0
+djangorestframework==3.14.0
 drf-spectacular==0.23.1
 
 -e .

@@ -1,0 +1,22 @@
+.create-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem 0;
+  gap: 5rem;
+
+  h1 {
+    color: rgb(var(--palette-primary-main-channels) / 100%);
+    font-weight: 600;
+    text-align: center;
+  }
+
+  img {
+    width: 75%;
+    max-width: 40rem;
+
+    opacity: 0.7;
+  }
+}

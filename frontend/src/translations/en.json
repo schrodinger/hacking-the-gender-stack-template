@@ -1,0 +1,24 @@
+{
+  "enumeration": {
+    "create": {
+      "heading": "Create a new enumeration to compare different drug products (does this makes sense? Is that what we're doing here?)",
+      "imageAlt": "Chemistry lab clipart",
+      "newEnumeration": "New Enumeration"
+    },
+    "pageTitle": "Enumeration"
+  },
+  "home": {
+    "description": "Schrödinger's first hackathon! I've never written good copy in my life so someone more qualified than me should fill this in.",
+    "eventName": "Hacking the Gender Stack",
+    "pageTitle": "Home",
+    "welcomeTo": "Welcome to"
+  },
+  "logoAlt": "Schrodinger logo",
+  "sidebar": {
+    "feedbackTitle": "Feedback",
+    "pieTitle": "Apple Pie",
+    "profileTitle": "Profile",
+    "settingsTitle": "Settings",
+    "treeTitle": "Honestly no idea what this is"
+  }
+}

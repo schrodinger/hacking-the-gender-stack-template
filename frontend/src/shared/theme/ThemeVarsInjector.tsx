@@ -1,7 +1,7 @@
 import { chunk, kebabCase, pick } from 'lodash';
 import { useLayoutEffect } from 'react';
 import { useTheme } from '@mui/material/styles';
-import type { Palette } from '@mui/material/styles';
+import type { Palette, Theme } from '@mui/material/styles';
 
 type ChannelTuple = [string, string, string];
 
@@ -108,6 +108,7 @@ interface ThemeVarsInjectorProps {
 function ThemeVarsInjector(props: ThemeVarsInjectorProps) {
   const { scope = ':root' } = props;
   const theme = useTheme();
+  window.theme = theme;
 
   useLayoutEffect(() => {
     const paletteVars = getPaletteVars(theme.palette);
@@ -121,3 +122,9 @@ function ThemeVarsInjector(props: ThemeVarsInjectorProps) {
 
 export type { ThemeVarsInjectorProps };
 export default ThemeVarsInjector;
+
+declare global {
+  interface Window {
+    theme: Theme;
+  }
+}

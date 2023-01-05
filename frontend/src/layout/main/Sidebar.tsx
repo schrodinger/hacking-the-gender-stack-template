@@ -11,6 +11,8 @@ import {
 import { Badge, Paper } from '@mui/material';
 import type { PaperProps } from '@mui/material';
 
+import t from '../../translations/en.json';
+
 import NavIconButton from './NavIconButton';
 import styles from './Sidebar.module.scss';
 
@@ -22,7 +24,9 @@ const cx = classnames.bind(styles);
 function UserProfileButton(props: { notificationCount?: number }) {
   const { notificationCount } = props;
 
-  const button = <NavIconButton className={cx('profile-button')} icon={Person} title="Profile" />;
+  const button = (
+    <NavIconButton className={cx('profile-button')} icon={Person} title={t.sidebar.profileTitle} />
+  );
 
   if (notificationCount) {
     return (
@@ -42,19 +46,23 @@ function Sidebar(props: PaperProps) {
   return (
     <Paper {...props} className={cx('sidebar', props.className)} elevation={6}>
       <div className={cx('logo-icon')}>
-        <img src="/images/schrodinger-logo.svg" alt="Schrodinger logo" />
+        <img src="/images/schrodinger-logo.svg" alt={t.logoAlt} />
       </div>
 
       <div className={cx('button-stack')}>
-        <NavIconButton icon={Home} path="/" title="Home" exact />
-        <NavIconButton icon={ViewList} path="/data" title="Data" />
-        <NavIconButton icon={PieChart} title="Apple Pie" />
-        <NavIconButton icon={AccountTree} title="Honestly no idea what this is" />
-        <NavIconButton icon={Forum} title="Feedback (or Chat who knows)" />
+        <NavIconButton icon={Home} path="/" title={t.home.pageTitle} exact />
+        <NavIconButton icon={ViewList} path="/enumeration" title={t.enumeration.pageTitle} />
+        <NavIconButton icon={PieChart} title={t.sidebar.pieTitle} />
+        <NavIconButton icon={AccountTree} title={t.sidebar.treeTitle} />
+        <NavIconButton icon={Forum} title={t.sidebar.feedbackTitle} />
       </div>
 
       <div className={cx('button-stack', 'user-pref-buttons')}>
-        <NavIconButton className={cx('settings-button')} icon={Settings} title="Settings" />
+        <NavIconButton
+          className={cx('settings-button')}
+          icon={Settings}
+          title={t.sidebar.settingsTitle}
+        />
         <UserProfileButton notificationCount={12} />
       </div>
     </Paper>

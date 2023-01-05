@@ -1,0 +1,7 @@
+## Backend gitignores
+__pycache__
+
+.vscode/
+.idea/
+api/db.sqlite3
+api/migrations

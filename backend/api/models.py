@@ -1,12 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-class RGroupLabel(models.Model):
-    label = models.TextField(primary_key=True)
-
 class Core(models.Model):
-    smiles = models.TextField(null=False)
-    rgroup_labels = models.ManyToManyField(RGroupLabel)
+    smiles = models.TextField(null=False, unique=True)
+    rgroup_labels = models.TextField(null=False)
 
 class RGroup(models.Model):
-    smiles = models.TextField(null=False)
+    smiles = models.TextField(null=False, unique=True)

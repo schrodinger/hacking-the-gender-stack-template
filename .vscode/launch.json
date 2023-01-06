@@ -9,7 +9,8 @@
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/backend/manage.py",
-            "args": [
+            "python": "${workspaceFolder}/backend/.backend-venv/bin/python",
+	        "args": [
                 "runserver"
             ],
             "django": true,

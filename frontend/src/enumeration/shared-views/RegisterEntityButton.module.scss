@@ -1,0 +1,46 @@
+.popover {
+  margin-top: 1rem;
+}
+
+.popover-content {
+  position: relative;
+  width: 30rem;
+  padding: 2rem;
+
+  .linear-progress {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .smiles-field {
+    display: block;
+
+    .textarea {
+      width: 100%;
+
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  .button-bar {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    background-color: rgb(var(--palette-text-primary-channels) / 20%);
+
+    button {
+      display: block;
+      margin-left: auto;
+
+      border-radius: 0;
+      border-bottom-right-radius: 15px;
+    }
+  }
+
+  .alert {
+    margin-top: 1rem;
+  }
+}

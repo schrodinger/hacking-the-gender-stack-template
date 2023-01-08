@@ -1,11 +1,10 @@
-# Python, Django ignores
-__pycache__
-*.egg-info
-
 # JavaScript, Node ignores
 node_modules
 dist
 npm-debug.log*
+
+# Env files
+.env
 
 # Misc
 .idea/

@@ -1,9 +1,11 @@
-.sidebar {
+:global(.MuiPaper-root).sidebar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
   padding: 1rem;
+
+  border-radius: 0;
 }
 
 .logo-icon {

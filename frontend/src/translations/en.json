@@ -1,11 +1,21 @@
 {
   "enumeration": {
+    "cores": {
+      "addCore": "Add Core",
+      "pickACore": "Start by picking a Core",
+      "noContent": "Looks like you haven't registered any cores yet"
+    },
     "create": {
       "heading": "Create a new enumeration to compare different drug products (does this makes sense? Is that what we're doing here?)",
       "imageAlt": "Chemistry lab clipart",
       "newEnumeration": "New Enumeration"
     },
     "pageTitle": "Enumeration"
+  },
+  "errorStatus": {
+    "imageAlt": "Broken test tube",
+    "message": "Uh Oh! Something went wrong",
+    "tryAgain": "Try Again"
   },
   "home": {
     "description": "Schrödinger's first hackathon! I've never written good copy in my life so someone more qualified than me should fill this in.",
@@ -14,11 +24,27 @@
     "welcomeTo": "Welcome to"
   },
   "logoAlt": "Schrodinger logo",
+  "noContent": {
+    "imageAlt": "Empty box",
+    "message": "Nothing to display",
+    "subtitle": "(Hey there's no cat in here!)"
+  },
+  "registerEntity": {
+    "errorAlert": "Error: ${message}",
+    "smilesLabel": "Smiles",
+    "submit": "Submit"
+  },
+  "required": "Required",
   "sidebar": {
     "feedbackTitle": "Feedback",
     "pieTitle": "Apple Pie",
     "profileTitle": "Profile",
     "settingsTitle": "Settings",
     "treeTitle": "Honestly no idea what this is"
-  }
+  },
+  "smilesSearch": {
+    "label": "Search smiles",
+    "noMatchMessage": "Your search did not match any cores"
+  },
+  "success": "Success!"
 }

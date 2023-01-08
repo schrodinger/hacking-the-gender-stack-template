@@ -1,0 +1,55 @@
+.smiles-card {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  height: 18.5rem;
+  padding: 1rem;
+  gap: 0.5rem;
+
+  &.smiles-skeleton {
+    height: 18.5rem;
+  }
+}
+
+.image {
+  width: 100%;
+
+  border: 1px solid rgb(var(--palette-text-primary-channels) / 50%);
+  border-radius: 10px;
+  aspect-ratio: 1;
+}
+
+// This ridiculous selector is to win a specificity battle against MUI styles
+:global(.MuiTooltip-popper) :global(.MuiTooltip-tooltip.MuiTooltip-tooltipPlacementBottom).tooltip {
+  margin-top: 5px;
+}
+
+.smiles {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+
+  p {
+    display: box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    font-weight: 500;
+  }
+}
+
+:global(.MuiButton-root).smiles-card-button {
+  padding: 0;
+
+  &.is-selected {
+    outline: 3px solid var(--palette-primary-main);
+    outline-offset: -2px;
+
+    .selected-check {
+      display: flex;
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+    }
+  }
+}

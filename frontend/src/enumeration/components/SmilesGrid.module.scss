@@ -1,0 +1,21 @@
+.smiles-grid-parent {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 2rem;
+  justify-items: center;
+
+  padding: 2rem 0;
+
+  &.h-full {
+    height: 100%;
+  }
+
+  &.clamped-grid {
+    max-height: 100%;
+    overflow: hidden;
+  }
+}
+
+:global(.dummy-skeleton) {
+  visibility: hidden;
+}

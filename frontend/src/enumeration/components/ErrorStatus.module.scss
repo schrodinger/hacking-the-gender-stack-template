@@ -1,0 +1,21 @@
+.error-status-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-bottom: 5rem;
+  gap: 1.5rem;
+
+  .error-image {
+    width: 30%;
+    max-width: 15rem;
+
+    opacity: 0.7;
+  }
+
+  .error-message {
+    color: rgb(var(--palette-text-primary-channels) / 75%);
+    font-weight: 900;
+  }
+}

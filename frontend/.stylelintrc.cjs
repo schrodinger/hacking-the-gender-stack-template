@@ -12,6 +12,7 @@ module.exports = {
   plugins: ['stylelint-order'],
   rules: {
     'declaration-empty-line-before': null,
+    'max-nesting-depth': 3,
     'selector-class-pattern': [
       /^([a-z0-9\-]+|Mui[A-Z][a-zA-Z0-9\-]+)$/,
       {

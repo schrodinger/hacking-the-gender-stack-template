@@ -4,8 +4,6 @@ from django.urls import path, include
 from .views import RGroupViewSet
 
 router = DefaultRouter()
-router.register('', RGroupViewSet, 'rgroup')
+router.register("", RGroupViewSet, "rgroup")
 
-urlpatterns = [
-    path("", include(router.urls))
-]
+urlpatterns = [path("", include(router.urls))]

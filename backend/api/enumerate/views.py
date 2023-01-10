@@ -14,15 +14,21 @@ class Enumerate(APIView):
 
     serializer_class = EnumerateSerializer
 
-    @extend_schema(examples=[
-        OpenApiExample(name="Example",value=ENUMERATE_REQUEST_EXAMPLE, request_only=True)
-    ])
+    @extend_schema(
+        examples=[
+            OpenApiExample(
+                name="Example", value=ENUMERATE_REQUEST_EXAMPLE, request_only=True
+            )
+        ]
+    )
     def post(self, request):
         data = JSONParser().parse(request)
         serializer = EnumerateSerializer(data=data)
         serializer.is_valid(raise_exception=True)
 
-        products = rgroup_enumerate(core_smi=serializer.validated_data["core_smiles"],
-                                    rgroup_smis=serializer.validated_data["rgroup_smiles"])
+        products = rgroup_enumerate(
+            core_smi=serializer.validated_data["core_smiles"],
+            rgroup_smis=serializer.validated_data["rgroup_smiles"],
+        )
         response = {"products": products}
         return Response(response)

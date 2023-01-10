@@ -1,5 +1,6 @@
 ## Backend gitignores
 __pycache__
+*.egg-info
 
 .vscode/
 .idea/

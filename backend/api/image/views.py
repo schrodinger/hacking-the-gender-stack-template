@@ -14,12 +14,16 @@ class Image(APIView):
 
     serializer_class = ImageRequestSerializer
 
-    @extend_schema(examples=[
-        OpenApiExample(name="Example",value=IMAGE_REQUEST_EXAMPLE, request_only=True)
-    ])
+    @extend_schema(
+        examples=[
+            OpenApiExample(
+                name="Example", value=IMAGE_REQUEST_EXAMPLE, request_only=True
+            )
+        ]
+    )
     def post(self, request):
         data = JSONParser().parse(request)
-        serializer =  ImageRequestSerializer(data=data)
+        serializer = ImageRequestSerializer(data=data)
         serializer.is_valid(raise_exception=True)
         smiles = serializer.validated_data["smiles"]
         img = generate_image(mol_smi=smiles)

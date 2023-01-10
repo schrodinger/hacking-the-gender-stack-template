@@ -4,8 +4,6 @@ from django.urls import path, include
 from .views import CoreViewSet
 
 router = DefaultRouter()
-router.register('', CoreViewSet, 'core')
+router.register("", CoreViewSet, "core")
 
-urlpatterns = [
-    path("", include(router.urls))
-]
+urlpatterns = [path("", include(router.urls))]

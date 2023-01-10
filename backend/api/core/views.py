@@ -12,6 +12,7 @@ from api.core.examples import EXAMPLE_REQUEST
 
 logger = logging.getLogger(__name__)
 
+
 class CoreViewSet(ModelViewSet):
     serializer_class = CoreRequestSerializer
     queryset = Core.objects.all()
@@ -23,7 +24,11 @@ class CoreViewSet(ModelViewSet):
             core["rgroup_labels"] = core["rgroup_labels"].split(",")
         return Response(modelSerializer.data)
 
-    @extend_schema(examples=[OpenApiExample(name="Example", value=EXAMPLE_REQUEST, request_only=True)])
+    @extend_schema(
+        examples=[
+            OpenApiExample(name="Example", value=EXAMPLE_REQUEST, request_only=True)
+        ]
+    )
     def create(self, request):
         requestSerializer = CoreRequestSerializer(data=request.data)
         requestSerializer.is_valid(raise_exception=True)
@@ -33,11 +38,18 @@ class CoreViewSet(ModelViewSet):
             labels = get_rgroup_labels(requestSerializer.validated_data["smiles"])
         except Exception as e:
             logger.exception(e)
-            return HttpResponseBadRequest("Error while grabbing rgroup labels from core. Are you sure you passed in a smiles string that has rgroups?")
+            return HttpResponseBadRequest(
+                "Error while grabbing rgroup labels from core. Are you sure you passed in a smiles string that has rgroups?"
+            )
 
         # Save the core in the db
         labelsText = ",".join(labels)
-        modelSerializer = CoreModelSerializer(data={"smiles": requestSerializer.validated_data["smiles"], "rgroup_labels": labelsText})
+        modelSerializer = CoreModelSerializer(
+            data={
+                "smiles": requestSerializer.validated_data["smiles"],
+                "rgroup_labels": labelsText,
+            }
+        )
         modelSerializer.is_valid(raise_exception=True)
         savedModel = modelSerializer.save()
 

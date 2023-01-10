@@ -1,0 +1,31 @@
+.rgroup-selection {
+  position: relative;
+
+  .done-button {
+    position: absolute;
+    right: 0;
+    bottom: 1.5rem;
+  }
+
+  .enumeration-snackbar {
+    width: calc(100% - 4rem);
+    max-width: 40rem;
+  }
+
+  .enumeration-alert {
+    width: 100%;
+  }
+}
+
+.tab-panels {
+  flex-grow: 1;
+  overflow: hidden;
+
+  .h-full {
+    height: 100%;
+  }
+
+  .hidden {
+    display: none;
+  }
+}

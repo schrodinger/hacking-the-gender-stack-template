@@ -1,0 +1,32 @@
+.core-data-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 100%;
+  padding: 2rem 0;
+
+  .back-button {
+    position: absolute;
+
+    border-radius: 50%;
+  }
+
+  .heading {
+    margin-bottom: 1rem;
+
+    color: var(--palette-primary-main);
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .loader {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .error {
+    flex-grow: 1;
+  }
+}

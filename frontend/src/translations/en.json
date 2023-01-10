@@ -1,16 +1,24 @@
 {
+  "back": "Back",
   "enumeration": {
     "cores": {
-      "addCore": "Add Core",
+      "addCore": "Add New Core",
       "pickACore": "Start by picking a Core",
-      "noContent": "Looks like you haven't registered any cores yet"
+      "noContent": "Looks like you haven't registered any cores yet",
+      "notFoundMessage": "The core you've provided does not exist. Are you sure the ID is correct?"
     },
     "create": {
       "heading": "Create a new enumeration to compare different drug products (does this makes sense? Is that what we're doing here?)",
       "imageAlt": "Chemistry lab clipart",
       "newEnumeration": "New Enumeration"
     },
-    "pageTitle": "Enumeration"
+    "pageTitle": "Enumeration",
+    "rgroups": {
+      "addRGroup": "Add New R-Group",
+      "done": "Done",
+      "pickRGroups": "Pick one or more R-Groups for each slot",
+      "selectionConstraint": "You must select at least one R-Group for each slot"
+    }
   },
   "errorStatus": {
     "imageAlt": "Broken test tube",

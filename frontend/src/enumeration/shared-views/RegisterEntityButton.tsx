@@ -43,6 +43,7 @@ function RegisterEntityButton<T = unknown>(props: RegisterEntityButtonProps<T>) 
     status,
     error,
     mutate: registerEntity,
+    reset: resetEntityMutation,
   } = useMutation({
     mutationFn: registrationFn,
     onSuccess: (data, smiles) => {
@@ -72,6 +73,7 @@ function RegisterEntityButton<T = unknown>(props: RegisterEntityButtonProps<T>) 
     setIsPopoverOpen(false);
     setSmiles('');
     setSmilesError(false);
+    resetEntityMutation();
   };
 
   const popoverContent = useMemo(() => {

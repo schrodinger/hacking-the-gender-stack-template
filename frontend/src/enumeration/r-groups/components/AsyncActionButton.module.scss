@@ -1,0 +1,11 @@
+.button-wrapper {
+  display: block;
+
+  .async-button:disabled {
+    background-color: var(--palette-grey-300);
+  }
+
+  .async-button > * {
+    margin-right: 0.5rem;
+  }
+}

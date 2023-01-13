@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     "api",
     "rest_framework",
     "drf_spectacular",
+    "corsheaders",
 ]
 
 REST_FRAMEWORK = {
@@ -29,6 +30,7 @@ REST_FRAMEWORK = {
 }
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -114,3 +116,7 @@ LOGGING = {
     "disable_existing_loggers": False,
     "handlers": {"console": {"class": "logging.StreamHandler", "formatter": "default"}},
 }
+
+# CORS
+
+CORS_ALLOW_ALL_ORIGINS = DEBUG

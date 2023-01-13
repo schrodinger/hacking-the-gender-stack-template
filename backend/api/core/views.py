@@ -14,15 +14,24 @@ logger = logging.getLogger(__name__)
 
 
 class CoreViewSet(ModelViewSet):
-    serializer_class = CoreRequestSerializer
+    serializer_class = CoreModelSerializer
     queryset = Core.objects.all()
 
     def list(self, request):
-        modelSerializer = CoreModelSerializer(self.queryset, many=True)
+        queryset = self.get_queryset()
+        modelSerializer = CoreModelSerializer(queryset, many=True)
         responseList = modelSerializer.data
         for core in responseList:
             core["rgroup_labels"] = core["rgroup_labels"].split(",")
         return Response(modelSerializer.data)
+
+    def retrieve(self, request, **kwargs):
+        instance = self.get_object()
+        serializer = self.get_serializer(instance)
+
+        response = serializer.data
+        response["rgroup_labels"] = response["rgroup_labels"].split(",")
+        return Response(response)
 
     @extend_schema(
         examples=[

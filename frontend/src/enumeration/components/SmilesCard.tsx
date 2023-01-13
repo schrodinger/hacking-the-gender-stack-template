@@ -3,13 +3,10 @@ import { Button, Paper, Skeleton, Tooltip, Typography } from '@mui/material';
 import { CheckCircle } from '@mui/icons-material';
 import type { ButtonProps, PaperProps, SkeletonProps } from '@mui/material';
 
-import { getApiUrl } from '../../shared/xhr/utils';
-
+import SmilesImage from './SmilesImage';
 import styles from './SmilesCard.module.scss';
 
 const cx = classnames.bind(styles);
-
-const IMAGE_API_URL = '/api/image/';
 
 interface SmilesCardProps extends PaperProps {
   /**
@@ -23,12 +20,10 @@ interface SmilesCardProps extends PaperProps {
  */
 function SmilesCard(props: SmilesCardProps) {
   const { smiles, className: paperClasses, ...paperProps } = props;
-  const imageUrl = getApiUrl(IMAGE_API_URL);
-  imageUrl.search = new URLSearchParams({ smiles }).toString();
 
   return (
     <Paper elevation={6} {...paperProps} className={cx('smiles-card', paperClasses)}>
-      <img className={cx('image')} src={imageUrl.toString()} alt={smiles} />
+      <SmilesImage className={cx('image')} smiles={smiles} />
       <div className={cx('smiles')}>
         <Tooltip
           slotProps={{ tooltip: { className: cx('tooltip') } }}

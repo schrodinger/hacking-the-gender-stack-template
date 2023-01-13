@@ -86,7 +86,11 @@ function RGroupsTabs(props: RGroupsTabsProps) {
         const selectedRGroupIds = selectedRGroups[label]!.map((rgroup) => rgroup.id);
 
         return (
-          <SmilesDataProvider key={label} queryOptions={{ queryKey, queryFn: fetchAllRGroups }}>
+          <SmilesDataProvider
+            key={label}
+            queryOptions={{ queryKey, queryFn: fetchAllRGroups }}
+            messages={{ noContent: "Look like you haven't registered any R-Groups yet" }}
+          >
             {(rgroups) => (
               <SmilesGrid
                 smilesList={rgroups}

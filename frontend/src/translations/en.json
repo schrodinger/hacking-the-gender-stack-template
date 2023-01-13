@@ -13,10 +13,19 @@
       "newEnumeration": "New Enumeration"
     },
     "pageTitle": "Enumeration",
+    "properties": {
+      "compound": "Compound",
+      "enumeratedProperties": "Enumerated Properties",
+      "id": "ID",
+      "noContent": "No products available. Are you sure you created an enumeration?",
+      "subtitle": "Compare, sort, and filter compounds based on their calculated properties"
+    },
     "rgroups": {
       "addRGroup": "Add New R-Group",
+      "coreSmilesTitle": "Core Smiles:",
       "done": "Done",
       "pickRGroups": "Pick one or more R-Groups for each slot",
+      "rgroupLabelsTitle": "R-Group labels:",
       "selectionConstraint": "You must select at least one R-Group for each slot"
     }
   },

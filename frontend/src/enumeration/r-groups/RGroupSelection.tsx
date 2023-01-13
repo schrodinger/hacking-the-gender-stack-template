@@ -2,8 +2,8 @@ import classnames from 'classnames/bind';
 import { Alert, Slide, Snackbar, Stack } from '@mui/material';
 import { Check } from '@mui/icons-material';
 import { sortBy } from 'lodash';
-import { useMatches, useNavigate } from 'react-router-dom';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 import RegisterEntityButton from '../shared-views/RegisterEntityButton';
@@ -16,6 +16,7 @@ import CoreDataProvider from './views/CoreDataProvider';
 import CoreInfo from './components/CoreInfo';
 import RGroupsTabs from './views/RGroupsTabs';
 import styles from './RGroupSelection.module.scss';
+import useEnumerationCallbackUrl from './hooks/useEnumerationCallbackUrl';
 import { enumerateProperties, registerNewRGroup } from './service';
 import type { RGroup } from './service';
 
@@ -29,13 +30,7 @@ function RGroupSelection(props: { core: Core }) {
   const rgroupLists = Object.values(rgroupsDict);
 
   const navigate = useNavigate();
-  const pathMatches = useMatches();
-  /**
-   * Since this component doesn't render an <Outlet /> the last path match belongs to the route for
-   * this element
-   */
-  const pathData = pathMatches[pathMatches.length - 1]!;
-  const { enumerationCallbackUrl } = pathData.handle as { enumerationCallbackUrl: string };
+  const enumerationCallbackUrl = useEnumerationCallbackUrl();
 
   const [enumerationError, setEnumerationError] = useState('');
   const queryClient = useQueryClient();

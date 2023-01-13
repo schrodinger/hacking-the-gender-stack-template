@@ -1,0 +1,23 @@
+.properties-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 100%;
+  padding: 2rem 0;
+  gap: 1.5rem;
+
+  .table-container {
+    flex-grow: 1;
+  }
+
+  .smiles-image {
+    width: var(--smiles-image-size);
+    height: var(--smiles-image-size);
+  }
+
+  .back-button {
+    position: absolute;
+
+    border-radius: 50%;
+  }
+}

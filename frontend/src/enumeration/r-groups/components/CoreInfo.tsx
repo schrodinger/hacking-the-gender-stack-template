@@ -2,7 +2,8 @@ import classnames from 'classnames/bind';
 import { Typography } from '@mui/material';
 import type { HTMLAttributes } from 'react';
 
-import { getApiUrl } from '../../../shared/xhr/utils';
+import SmilesImage from '../../components/SmilesImage';
+import t from '../../../translations/en.json';
 import type { Core } from '../../cores/service';
 
 import styles from './CoreInfo.module.scss';
@@ -21,22 +22,20 @@ interface CoreInfoProps extends HTMLAttributes<HTMLDivElement> {
  */
 function CoreInfo(props: CoreInfoProps) {
   const { core, className, ...divProps } = props;
-  const coreImgUrl = getApiUrl('api/image/');
-  coreImgUrl.search = new URLSearchParams({ smiles: core.smiles }).toString();
 
   return (
     <div className={cx('core-info', className)} {...divProps}>
-      <img className={cx('core-image')} src={coreImgUrl.toString()} alt={core.smiles} />
+      <SmilesImage className={cx('core-image')} smiles={core.smiles} />
       <div className={cx('core-data')}>
         <div className={cx('core-field')}>
           <Typography variant="caption" fontWeight={600}>
-            Core Smiles:
+            {t.enumeration.rgroups.coreSmilesTitle}
           </Typography>
           <Typography variant="body2">{core.smiles}</Typography>
         </div>
         <div className={cx('core-field')}>
           <Typography variant="caption" fontWeight={600}>
-            R-Group labels:
+            {t.enumeration.rgroups.rgroupLabelsTitle}
           </Typography>
           <Typography variant="body2">{core.rgroup_labels.join(' | ')}</Typography>
         </div>

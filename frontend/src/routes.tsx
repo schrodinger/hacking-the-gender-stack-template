@@ -4,6 +4,7 @@ import CoreSelection from './enumeration/cores/CoreSelection';
 import CreateEnumeration from './enumeration/create/CreateEnumeration';
 import ErrorPage from './error-page/ErrorPage';
 import Home from './home/Home';
+import PropertiesGrid from './enumeration/properties/PropertiesGrid';
 import RGroupSelection from './enumeration/r-groups/RGroupSelection';
 import { withMainLayout } from './layout/main/Main';
 
@@ -21,7 +22,7 @@ const coreRoutes = (
 const enumerationRoutes = (
   <Route path="enumeration">
     <Route index element={<CreateEnumeration />} />
-    <Route path="properties" element={<div />} />
+    <Route path="properties" element={<PropertiesGrid />} />
     {coreRoutes}
   </Route>
 );

@@ -1,6 +1,5 @@
 import ApiError from '../../shared/xhr/ApiError';
 import fetch from '../../shared/xhr/fetch';
-import { getApiUrl } from '../../shared/xhr/utils';
 
 interface RGroup {
   id: number;
@@ -12,12 +11,12 @@ interface EnumerateResponse {
 }
 
 const rgroupApiUrls = {
-  getAll: getApiUrl('api/rgroup/'),
-  create: getApiUrl('api/rgroup/'),
+  getAll: '/api/rgroup/',
+  create: '/api/rgroup/',
 };
 
 const enumerationApiUrls = {
-  create: getApiUrl('api/enumerate/'),
+  create: '/api/enumerate/',
 };
 
 async function fetchAllRGroups() {

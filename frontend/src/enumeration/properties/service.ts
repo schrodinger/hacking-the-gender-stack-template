@@ -1,6 +1,5 @@
 import ApiError from '../../shared/xhr/ApiError';
 import fetch from '../../shared/xhr/fetch';
-import { getApiUrl } from '../../shared/xhr/utils';
 
 interface PropertiesResponse {
   products: {
@@ -11,7 +10,7 @@ interface PropertiesResponse {
 type ProductProperties = { id: string; compound: string } & Record<string, number>;
 
 const propertiesApiUrl = {
-  create: getApiUrl('api/properties/'),
+  create: '/api/properties/',
 };
 
 async function fetchProductProperties(productSmilesList: string[]) {

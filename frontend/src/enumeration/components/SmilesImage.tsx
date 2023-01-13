@@ -1,9 +1,5 @@
 import type { ImgHTMLAttributes } from 'react';
 
-import { getApiUrl } from '../../shared/xhr/utils';
-
-const IMAGE_API_URL = '/api/image/';
-
 interface SmilesImageProps extends ImgHTMLAttributes<HTMLImageElement> {
   /**
    * Smiles string for a structure
@@ -16,7 +12,7 @@ interface SmilesImageProps extends ImgHTMLAttributes<HTMLImageElement> {
  */
 function SmilesImage(props: SmilesImageProps) {
   const { smiles, ...imgProps } = props;
-  const smilesImageUrl = getApiUrl(IMAGE_API_URL);
+  const smilesImageUrl = new URL('/api/image/', window.location.origin);
   smilesImageUrl.search = new URLSearchParams({ smiles }).toString();
 
   return <img {...imgProps} src={smilesImageUrl.toString()} alt={smiles} />;

@@ -22,5 +22,9 @@ export default {
        */
       clientPort: process.env.CODESPACES ? 443 : 3000,
     },
+
+    proxy: {
+      '/api': 'http://127.0.0.1:8000',
+    },
   },
 };

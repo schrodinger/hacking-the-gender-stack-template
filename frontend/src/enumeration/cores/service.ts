@@ -1,6 +1,5 @@
 import ApiError from '../../shared/xhr/ApiError';
 import fetch from '../../shared/xhr/fetch';
-import { getApiUrl } from '../../shared/xhr/utils';
 
 interface Core {
   id: number;
@@ -9,9 +8,9 @@ interface Core {
 }
 
 const coreApiUrls = {
-  getAll: getApiUrl('api/core/'),
-  getById: getApiUrl('api/core/:id/'),
-  create: getApiUrl('api/core/'),
+  getAll: '/api/core/',
+  getById: '/api/core/:id/',
+  create: '/api/core/',
 };
 
 async function fetchAllCores(): Promise<Core[]> {

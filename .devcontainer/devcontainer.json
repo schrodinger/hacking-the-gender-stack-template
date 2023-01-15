@@ -22,6 +22,7 @@
         "ms-python.python"
       ],
       "settings": {
+        "files.autoSave": "off",
         "editor.codeActionsOnSave": {
           "source.fixAll": true
         },

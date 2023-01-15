@@ -2,7 +2,7 @@
 
 The frontend is a [React](https://beta.reactjs.org/) single page application written using [TypeScript](https://www.typescriptlang.org/) and [SCSS](https://sass-lang.com/) and bundled/served using [Vite](https://vitejs.dev/).
 
-For the best development experience we recommend using VSCode as your editor with the pre-configured development environment.
+For the best development experience we recommend using VSCode as your editor with the pre-configured [development environment](../.devcontainer/devcontainer.json).
 
 ## Usage
 
@@ -34,6 +34,8 @@ $> npm run build
 
 ## Development
 
+This template is provided as a starting point which you can use to build out a complete application. It includes some pre-configured pieces and some tools pre-installed so you can be the most productive with the time you have available.
+
 ### Libraries and Frameworks
 
 There are a few libraries and frameworks that we use in this template to help us focus most of our attention on the core implementation of our application's business logic and enable faster prototyping.
@@ -52,7 +54,47 @@ Since we are writing styles across multiple different SCSS modules, we are using
 
 React Router allows us to use "client side routing" in our application. This means we can associate different pages in our application with different URLs (like a traditional website) without needing to fetch a new document from the server. This lets us preserve local UI state between pages and offers more instant app-like navigation between routes in our application. You can see the existing routes in our application in `src/routes.tsx` and if you need to familiarize yourself with some of the features React Router offers, you can skim this [tutorial](https://reactrouter.com/en/6.6.1/start/tutorial).
 
-### Build system
+### Application Skeleton
+
+The starting point of this template's functionality is an application skeleton that you can develop additional functionality inside. The application skeleton is a basic client rendered React application that uses React Router for client side routing (see details [here](#react-router)).
+
+The entry point for your code will be in `src/routes.tsx` - this module is responsible for defining all routes within the application and includes an existing route for the home page with a primary application layout that renders the sidebar on the left. The recommended way to add more functionality into this application is to add additional routes alongside the home page index route that render the appropriate components (but you should always feel free to deviate from this if you need to!).
+
+The skeleton application is also pre-configured with a Material UI theme and CSS defaults to allow you to compose MUI components to create cohesive views for your application. Since the MUI theme is only constructed and exposed by default on the JS side, the application skeleton also has some code to provide the color palette of the theme via [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) so you can use them in your styles. You can see all the available CSS variables by opening your browser's devtools in the demo application and inspecting the styles on the `body` tag:
+
+![CSS variables in Devtools](docs/devtools_css_variables.jpg)
+
+You will notice there are two CSS variables for each theme color, for example `--palette-primary-main` and `--palette-primary-main-channels`. The `channels` variable for a theme color defines the raw red, green, and blue channels for that color while the base variables define the actual CSS color value for that theme color. This is so you can use MUI theme colors with different opacities in your styles. For example:
+
+```css
+.my-custom-element {
+  border-color: var(--palette-primary-main); // rgb(0 91 170)
+  background-color: rgb(var(--palette-primary-main-channels) / 50%); // rgb(0 91 170 / 50%)
+}
+```
+
+### Editor Experience (VSCode)
+
+_This section only applies if you are using the pre-configured VSCode editor as your development environment_
+
+This template includes some configuration for VSCode that will enable you to develop faster without having to worry about the minutiae of code styling and linting. Additionally, these settings also ensure a consistent code style across projects which will make it easier for the technical volunteers to help you with any troubleshooting if you run into any issues.
+
+The editor is set up to lint and format all of your code on save. We lint our JavaScript/TypeScript code using [ESLint](#eslint) and our CSS/SCSS code using [Stylelint](#stylelint) and all of it is formatted using [Prettier](#prettier). As such, you might see your code change slightly or move around to conform to the settings we have configured for these tools when you save your changes. ESLint attempts to autofix most linting errors that occur but some require either manual intervention from the developer or are offered as suggestions instead of an autofix. You can see details about these errors/warnings by hovering over the red or yellow underlined code and applying the suggested changes from the "Quick Fix" menu (if available).
+
+![VSCode lint warning](docs/vscode_lint_warning.jpg)
+![VSCode lint suggestion](docs/vscode_lint_suggestion.jpg)
+
+### Debugging
+
+Regardless of the development environment you are using, one easy way to debug your frontend code is to use the devtools that come bundled with your browser. While your application is open in a browser tab, open the devtools for your browser (this is usually available via `right click -> Inspect Element`). Navigate to the "Sources" or "Debugger" tab inside the devtools. You will find your application files under the absolute path to your `src` directory (it should look something like `workspaces/hackathon-project/frontend/src`). You can now open any module you want to debug and set breakpoints to inspect application state.
+
+![Browser debugger](docs/browser_debugger.jpg)
+
+Please feel free to ask any of the technical volunteers if you need help with properly debugging your application!
+
+---
+
+## Build system
 
 The build system tooling for an application encapsulates everything from setting up a development environment, tools to enhance development experience all the way to packaging and optimizing an application for production. As such, most developers don't need to dive too deep into how the build system works to contribute code to their application. If you're not planning on making any changes to the pre-configured development environment, you do not necessarily need to read through this section of the documentation. But if you'd like to make changes to your development environment or if you're just curious about things happening under the hood, this documentation should help you get a high level idea of the frontend tooling.
 

@@ -46,12 +46,15 @@ function Sidebar(props: PaperProps) {
   return (
     <Paper {...props} className={cx('sidebar', props.className)} elevation={6}>
       <div className={cx('logo-icon')}>
-        <img src="/images/schrodinger-logo.svg" alt={t.logoAlt} />
+        <img src="/images/logo.svg" alt={t.logoAlt} />
       </div>
 
       <div className={cx('button-stack')}>
         <NavIconButton icon={Home} path="/" title={t.home.pageTitle} exact />
-        <NavIconButton icon={ViewList} path="/enumeration" title={t.enumeration.pageTitle} />
+
+        {/* Populate this sidebar item with the appropriate icon, path, and title for your application */}
+        <NavIconButton icon={ViewList} title="" />
+
         <NavIconButton icon={PieChart} title={t.sidebar.pieTitle} />
         <NavIconButton icon={AccountTree} title={t.sidebar.treeTitle} />
         <NavIconButton icon={Forum} title={t.sidebar.feedbackTitle} />

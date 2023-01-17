@@ -1,17 +1,13 @@
-from drf_spectacular.utils import extend_schema, OpenApiExample, OpenApiParameter
-from drf_spectacular.types import OpenApiTypes
-
-from django.http import HttpResponse
-from rest_framework.views import APIView
-
-from science.rdkit_endpoints import generate_image
-
 from api.image.serializers import ImageRequestSerializer
 from api.image.examples import IMAGE_REQUEST_EXAMPLE
+from drf_spectacular.utils import extend_schema, OpenApiExample, OpenApiParameter
+from drf_spectacular.types import OpenApiTypes
+from django.http import HttpResponse
+from rest_framework.views import APIView
+from science.rdkit_endpoints import generate_image
 
 
 class Image(APIView):
-
     serializer_class = ImageRequestSerializer
 
     @extend_schema(

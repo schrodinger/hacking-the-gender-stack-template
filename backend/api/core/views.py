@@ -1,14 +1,14 @@
-from rest_framework.viewsets import ModelViewSet
+import logging
+
 from api.core.serializers import CoreRequestSerializer, CoreModelSerializer
 from api.models import Core
-from science.rdkit_endpoints import get_rgroup_labels
+from api.core.examples import EXAMPLE_REQUEST
 from django.http import HttpResponseBadRequest
-import logging
-from rest_framework.renderers import JSONRenderer
-from rest_framework.response import Response
 from drf_spectacular.utils import OpenApiExample
 from drf_spectacular.utils import extend_schema
-from api.core.examples import EXAMPLE_REQUEST
+from science.rdkit_endpoints import get_rgroup_labels
+from rest_framework.viewsets import ModelViewSet
+from rest_framework.response import Response
 
 logger = logging.getLogger(__name__)
 

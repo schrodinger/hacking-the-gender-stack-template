@@ -1,1 +1,0 @@
-EXAMPLE_REQUEST = {"smiles": "*N1CCCC1"}

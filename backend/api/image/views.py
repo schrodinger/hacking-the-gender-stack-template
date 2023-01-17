@@ -22,7 +22,10 @@ class Image(APIView):
                 ],
             )
         ],
-        responses={(200, "image/svg+xml"): OpenApiTypes.BYTE},
+        responses={
+            (200, "*/*"): OpenApiTypes.BYTE,
+            (200, "image/svg+xml"): OpenApiTypes.BYTE,
+        },
     )
     def get(self, request):
         data = request.query_params

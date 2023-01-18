@@ -3,10 +3,10 @@ Here are some resources about UX/UI to get you started.
 
 
 ## Designing
-We recommend using [Figma](www.figma.com) for desiging and prototyping. <br><br>
-[UX Library](www.uxlibrary.org) is a comprehesive guide that covers the UX process and UI design.
+We recommend using [Figma](https://www.figma.com) for desiging and prototyping. <br><br>
+[UX Library](https://www.uxlibrary.org) is a comprehesive guide that covers the UX process and UI design.
 
-### Inpsiration
+### Inspiration
 * [Behance](https://www.behance.net/)
 * [Dribbble](https://dribbble.com/)
 

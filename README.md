@@ -22,7 +22,7 @@
 
 <br><br>
 
-# Links
+## Links
 * [Introduction presentation](https://docs.google.com/presentation/d/1NJKCubqzyhk3_z4pin8jTwTcp_4_Ip2ZHT367m8Nk5w/edit?usp=sharing)
 * Zoom meeting links for remote volunteers
   * Thu, Jan 19th: https://schrodinger.zoom.us/j/99133247116

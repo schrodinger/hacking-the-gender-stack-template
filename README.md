@@ -1,15 +1,15 @@
+# Hacking the Gender Stack 2023
 
-```
-Note: There are a separate `README.md` in the backend, frontend, and ui folders.
-```
-# Problem Statement
+*Note: There are a separate `README.md` in the backend, frontend, and ui folders.*
+<br><br>
+## Problem Statement
 
 ### Drug discovery takes a lot of time, labor, and money. How might you develop a tool to help chemists effectively create and compare new drugs?
 
 
 <br><br>
 
-# Rooms
+## Rooms
 
 | Room Name  | Floor:Room # | Description |
 | :------------- | :------------- | :------------- |
@@ -31,7 +31,7 @@ Note: There are a separate `README.md` in the backend, frontend, and ui folders.
 * Submit presentations [here](https://forms.gle/U4BNpmxFKURKqAF16). You'll have 5 mins to present and demo your final product.
 
 <br><br>
-# Agenda
+## Agenda
 
 ### Day 1: Thu, Jan 19th
 | Time  | Session |

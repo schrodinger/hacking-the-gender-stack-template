@@ -27,7 +27,7 @@ Note: There are a separate `README.md` in the backend, frontend, and ui folders.
 * Zoom meeting links for remote volunteers
   * Thu, Jan 19th: https://schrodinger.zoom.us/j/99133247116
   * Fri, Jan 20th: https://schrodinger.zoom.us/j/98403704583
-* [VSCode Keyboard Shortcuts](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
+* [VSCode Keyboard Shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 * Submit presentations [here](https://forms.gle/U4BNpmxFKURKqAF16). You'll have 5 mins to present and demo your final product.
 
 <br><br>

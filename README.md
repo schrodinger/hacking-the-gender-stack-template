@@ -6,6 +6,14 @@
 
 ### Drug discovery takes a lot of time, labor, and money. How might you develop a tool to help chemists effectively create and compare new drugs?
 
+<br><br>
+## Links
+* [Introduction presentation](https://docs.google.com/presentation/d/1NJKCubqzyhk3_z4pin8jTwTcp_4_Ip2ZHT367m8Nk5w/edit?usp=sharing)
+* [VSCode Keyboard Shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
+* Submit presentations [here](https://forms.gle/U4BNpmxFKURKqAF16). You'll have 5 mins to present and demo your final product.
+* View this [document](https://docs.google.com/document/d/1vvoOpr1lam9daj9vdOIxaiMtL-SWQw0NrrAvB06xSEc/edit?usp=sharing) for zoom links and demo.
+
+
 
 <br><br>
 
@@ -22,13 +30,7 @@
 
 <br><br>
 
-## Links
-* [Introduction presentation](https://docs.google.com/presentation/d/1NJKCubqzyhk3_z4pin8jTwTcp_4_Ip2ZHT367m8Nk5w/edit?usp=sharing)
-* [VSCode Keyboard Shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
-* Submit presentations [here](https://forms.gle/U4BNpmxFKURKqAF16). You'll have 5 mins to present and demo your final product.
-* View this [document](https://docs.google.com/document/d/1vvoOpr1lam9daj9vdOIxaiMtL-SWQw0NrrAvB06xSEc/edit?usp=sharing) for zoom links and demo.
 
-<br><br>
 ## Agenda
 
 ### Day 1: Thu, Jan 19th

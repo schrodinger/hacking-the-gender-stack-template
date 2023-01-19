@@ -19,7 +19,8 @@
         "esbenp.prettier-vscode",
         "dbaeumer.vscode-eslint",
         "stylelint.vscode-stylelint",
-        "ms-python.python"
+        "ms-python.python",
+        "ms-toolsai.jupyter"
       ],
       "settings": {
         "files.autoSave": "off",
